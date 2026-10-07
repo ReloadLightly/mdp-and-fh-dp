@@ -2,6 +2,26 @@
 
 A worked learning companion to Christian Osendorfer’s lab. The original [lab01.html](lab01.html) is the authority; it is preserved without changes. Problems 1–4 are compulsory, 5–6 recommended practice, and 7–9 optional self-study. This companion works through all of them.
 
+<a id="python-code"></a>
+
+## Python implementations for all nine problems
+
+The complete Python implementations are in [examples/](examples/). Each problem has a runnable script, and its code is explained line by line in the corresponding chapter below. Use Python 3.9 or newer; all examples use the standard library, so no packages need to be installed. Run the commands below from the repository directory. Each command starts Python and executes the named file.
+
+| Problem | Complete Python file | What it computes | Run command |
+| --- | --- | --- | --- |
+| 1 | [problem01.py](examples/problem01.py) | Greedy path, backward values, optimal actions, and optimal path | `python3 examples/problem01.py` |
+| 2 | [problem02.py](examples/problem02.py) | Cautious-policy values and exact trajectory enumeration | `python3 examples/problem02.py` |
+| 3 | [problem03.py](examples/problem03.py) | Optimal values, ties, policy losses, and behavioral policy counts | `python3 examples/problem03.py` |
+| 4 | [problem04.py](examples/problem04.py) | Q-values, single-stage policy improvement, and the remaining-gap correction | `python3 examples/problem04.py` |
+| 5 | [problem05.py](examples/problem05.py) | Inventory values and all optimal actions for horizons 1, 2, and 3 | `python3 examples/problem05.py` |
+| 6 | [problem06.py](examples/problem06.py) | Exact offer thresholds and expected sale value for four stages | `python3 examples/problem06.py` |
+| 7 | [problem07.py](examples/problem07.py) | Wear-dependent augmented states, optimal values, and operate/repair policy evaluation | `python3 examples/problem07.py` |
+| 8 | [problem08.py](examples/problem08.py) | Salvage switching points and backward induction for salvage 0, 10, and 30 | `python3 examples/problem08.py` |
+| 9 | [problem09.py](examples/problem09.py) | Return distributions, means, variances, and the expected-utility recursion | `python3 examples/problem09.py` |
+
+The shared [common.py](examples/common.py) contains the exact machine data, the backward-recursion function, and a helper that preserves every maximizing action when values tie. The scripts that need it import it automatically; its code is fully explained in problems 2 and 3. Conceptual questions and proofs are worked through in the README alongside the numerical implementations.
+
 ## How to use this book
 
 Read each subquestion in its original order: question, definitions, hand calculation, Python, explanation of every line, and comparison with executed output. The letter labels are added here because the source uses unlettered bullets. They preserve the source’s order. A code excerpt is part of its named runnable file; execute that complete file to supply definitions from earlier excerpts.
@@ -12,6 +32,7 @@ The HTML was read only inside `main#quarto-document-content`. Each KaTeX express
 
 ## Contents and coverage checklist
 
+- [Python implementations for all nine problems](#python-code)
 - [Conventions and Python setup](#conventions)
 
 **[Problem 1: Deterministic backward induction](#problem-1)**
